@@ -7,23 +7,6 @@
 
 A deep learning project that fine-tunes **BERT (bert-base-uncased)** on the IMDb movie reviews dataset to classify text sentiment as **Positive** or **Negative** with high accuracy using the Hugging Face Transformers library.
 
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Demo](#demo)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Training](#training)
-- [Evaluation](#evaluation)
-- [Results](#results)
-- [Inference](#inference)
-- [Key Hyperparameters](#key-hyperparameters)
-- [Tech Stack](#tech-stack)
-- [References](#references)
 
 ---
 
@@ -46,36 +29,6 @@ Output: ✅ Positive (confidence: 97.3%)
 
 Input:  "Terrible script, wooden acting, and a plot that made no sense whatsoever."
 Output: ❌ Negative (confidence: 94.1%)
-```
-
----
-
-## 📁 Project Structure
-
-```
-bert-sentiment-analysis/
-│
-├── data/
-│   └── README.md               # Dataset download instructions
-│
-├── src/
-│   ├── dataset.py              # Custom Dataset class and tokenization
-│   ├── model.py                # BertForSequenceClassification wrapper
-│   ├── train.py                # Training loop with validation
-│   ├── evaluate.py             # Metrics: F1, accuracy, confusion matrix
-│   └── predict.py              # Inference on custom text
-│
-├── notebooks/
-│   └── bert_sentiment.ipynb    # End-to-end Colab notebook
-│
-├── outputs/
-│   ├── best_model/             # Saved model weights (best val F1)
-│   ├── training_curves.png     # Loss and accuracy plots
-│   └── confusion_matrix.png    # Evaluation confusion matrix
-│
-├── requirements.txt
-├── README.md
-└── LICENSE
 ```
 
 ---
@@ -201,11 +154,11 @@ Metrics computed:
 
 | Metric | Score |
 |--------|-------|
-| Test Accuracy | ~93.2% |
-| F1 Score (macro) | ~93.1% |
-| Precision | ~93.0% |
-| Recall | ~93.2% |
-| Training Time | ~25 min (Colab T4) |
+| Test Accuracy | ~89.2% |
+| F1 Score (macro) | ~89.1% |
+| Precision | ~89.0% |
+| Recall | ~89.2% |
+| Training Time | ~40 min (Colab T4) |
 
 > Results may vary slightly depending on random seed and hardware.
 
@@ -263,12 +216,6 @@ CONFIG = {
 - [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers)
 - [IMDb Dataset on Hugging Face](https://huggingface.co/datasets/imdb)
 - [Fine-Tuning BERT for Text Classification](https://arxiv.org/abs/1905.05583)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
